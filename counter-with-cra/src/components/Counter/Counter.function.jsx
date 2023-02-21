@@ -1,9 +1,16 @@
 import { useState } from 'react';
 
-function Counter(props) {
-  let [count, setCount] = useState(props.count);
-  const handleIncrement = () => setCount(count + props.step);
-  const handleDecrement = () => setCount(count - props.step);
+// function Counter(props) {
+//   let [count, setCount] = useState(props.count);
+//   const handleIncrement = () => setCount(count + props.step);
+//   const handleDecrement = () => setCount(count - props.step);
+
+function Counter({min=1, count : initialCount =1 ,max=10,step=1}){
+  let [count,setCount] = useState(initialCount)
+    const handleIncrement = () => setCount(count + step);
+  const handleDecrement = () => setCount(count - step);
+
+
 
   return (
     <div className="Counter">

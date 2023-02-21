@@ -1,0 +1,7 @@
+.Counter {
+  display: inline-flex;
+  justify-content: center;
+  gap: 8px;
+  width: 200px;
+
+}
